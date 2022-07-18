@@ -1,0 +1,23 @@
+#calculating primes up to 10000
+import time
+t0 = time.process_time()
+LIM = 10000
+primes = []
+for i in range (2,LIM):
+  flag = False
+  for j in range(2, i):
+    if (i % j) == 0:
+      flag = True
+      break
+  if flag == False:
+   primes.append(i)
+print(primes)
+t1 = time.process_time()
+runtime = round((t1 - t0)* 1000,2)
+
+print("Time to run:",runtime,"miliseconds")
+
+#time to run was 421.88 miliseconds
+#improvements :
+#-puts all the numbers in a list and prints them at the same time
+#-stops testing after one factor is found (line 11)
