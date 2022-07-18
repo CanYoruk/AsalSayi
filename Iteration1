@@ -1,7 +1,7 @@
-#calculating primes up to 1000
+#calculating primes up to 10000
 import time
 t0 = time.process_time()
-LIM = 1000
+LIM = 10000
 for i in range (2,LIM):
   flag = False
   for j in range(2, i):
@@ -13,3 +13,5 @@ t1 = time.process_time()
 runtime = round((t1 - t0)* 1000,2)
 
 print("Time to run:",runtime,"miliseconds")
+
+#time to run was 4625 miliseconds
